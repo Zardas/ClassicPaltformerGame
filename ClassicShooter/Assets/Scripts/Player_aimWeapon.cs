@@ -38,17 +38,25 @@ public class Player_aimWeapon : MonoBehaviour
 
         Vector3 aimDirection = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        aim.transform.eulerAngles = new Vector3(0, 0, angle);
+        
 
-        if(aim.transform.eulerAngles.z > 90 && aim.transform.eulerAngles.z < 280 && !alreadyRotated) //LEFT
+        if(angle > 90 && angle < 280) //LEFT
         {
-            gun.transform.Rotate(180f, 0, 0);
-            alreadyRotated = !alreadyRotated;
+            aim.transform.eulerAngles = new Vector3(0, 0, angle + 20);
+            if (!alreadyRotated)
+            {
+                gun.transform.Rotate(180f, 0, 0);
+                alreadyRotated = !alreadyRotated;
+            } 
         }
-        if(!(aim.transform.eulerAngles.z > 90 && aim.transform.eulerAngles.z < 280) && alreadyRotated) //RIGHT
+        if(!(angle > 90 && angle < 280)) //RIGHT
         {
-            gun.transform.Rotate(180f, 0, 0);
-            alreadyRotated = !alreadyRotated;
+            aim.transform.eulerAngles = new Vector3(0, 0, angle - 20);
+            if(alreadyRotated)
+            {
+                gun.transform.Rotate(180f, 0, 0);
+                alreadyRotated = !alreadyRotated;
+            }
         }
 
         //Debug.Log("Rotation actuelle : " + aim.transform.eulerAngles);
