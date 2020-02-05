@@ -36,4 +36,8 @@ public class Player_shoot : MonoBehaviour
         ammoPrefab.transform.SetParent(prefabRepository.transform);
 
     }
+
+
+
+    
 }

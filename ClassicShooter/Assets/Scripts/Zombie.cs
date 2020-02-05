@@ -20,6 +20,21 @@ public class Zombie : MonoBehaviour
     }
 
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
+
+
+        // Ammo
+        Ammo ammo = collision.GetComponent<Ammo>();
+        if (ammo != null)
+        {
+            TakeDamage(ammo.damage);
+        }
+
+    }
+
+
     public void TakeDamage(int damage)
     {
         health -= damage;

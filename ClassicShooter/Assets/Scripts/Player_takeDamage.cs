@@ -47,4 +47,34 @@ public class Player_takeDamage : MonoBehaviour
 
         healthTextText.text = health + "/" + healthMax;
     }
+
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log(collision.name);
+
+
+        // Ammo
+        Ammo ammo = collision.GetComponent<Ammo>();
+        if (ammo != null)
+        {
+            TakeDamage(ammo.damage);
+        }
+
+    }
+
+    public void TakeDamage(int damage)
+    {
+        this.health -= damage;
+        if (health <= 0)
+        {
+            die();
+        }
+    }
+
+    private void die()
+    {
+        Destroy(gameObject);
+    }
 }
