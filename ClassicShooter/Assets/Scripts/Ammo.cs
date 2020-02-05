@@ -30,10 +30,19 @@ public class Ammo : MonoBehaviour
     {
         Debug.Log(collision.name);
 
+
+        // Mannequin
         Mannequin_script mannequin = collision.GetComponent<Mannequin_script>();
         if (mannequin != null)
         {
             mannequin.TakeDamage(damage);
+        }
+
+        // Mannequin
+        Zombie zombie = collision.GetComponent<Zombie>();
+        if (zombie != null)
+        {
+            zombie.TakeDamage(damage);
         }
         Destroy(gameObject);
     }

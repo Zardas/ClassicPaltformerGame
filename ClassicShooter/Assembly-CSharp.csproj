@@ -66,6 +66,8 @@
     <Compile Include="Assets\Scripts\Player_aimWeapon.cs" />
     <Compile Include="Assets\Scripts\Player_movement.cs" />
     <Compile Include="Assets\Scripts\Player_shoot.cs" />
+    <Compile Include="Assets\Scripts\Player_takeDamage.cs" />
+    <Compile Include="Assets\Scripts\Zombie.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Antoine/Desktop/Scolaire/Master1Uqar/ConceptionJeuxVideos/ClassicPaltformerGame/ClassicShooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
