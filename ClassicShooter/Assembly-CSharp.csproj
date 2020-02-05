@@ -60,9 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Ammo.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
+    <Compile Include="Assets\Scripts\Mannequin_script.cs" />
     <Compile Include="Assets\Scripts\Player_aimWeapon.cs" />
     <Compile Include="Assets\Scripts\Player_movement.cs" />
+    <Compile Include="Assets\Scripts\Player_shoot.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/Antoine/Desktop/Scolaire/Master1Uqar/ConceptionJeuxVideos/ClassicPaltformerGame/ClassicShooter/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>

@@ -18,7 +18,7 @@ public class Player_movement : MonoBehaviour
     Transform groundCheckRight;
 
     [SerializeField]
-    float jumpSpeed = 6;
+    float jumpSpeed = 8;
 
     [SerializeField]
     float runSpeed = 6;
@@ -116,9 +116,6 @@ public class Player_movement : MonoBehaviour
     private void flip()
     {
         this.faceRight = !this.faceRight;
-        //spriteRenderer.flipX = !this.faceRight;
         transform.Rotate(0, 180f, 0);
-
-        //gun.transform.Rotate(0, 0, 180f);
     }
 }

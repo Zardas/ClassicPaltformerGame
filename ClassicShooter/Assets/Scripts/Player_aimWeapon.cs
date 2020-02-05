@@ -40,22 +40,19 @@ public class Player_aimWeapon : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aim.transform.eulerAngles = new Vector3(0, 0, angle);
 
-        if(aim.transform.eulerAngles.z > 90 && aim.transform.eulerAngles.z < 280 && !alreadyRotated)
+        if(aim.transform.eulerAngles.z > 90 && aim.transform.eulerAngles.z < 280 && !alreadyRotated) //LEFT
         {
             gun.transform.Rotate(180f, 0, 0);
             alreadyRotated = !alreadyRotated;
         }
-        if(!(aim.transform.eulerAngles.z > 90 && aim.transform.eulerAngles.z < 280) && alreadyRotated)
+        if(!(aim.transform.eulerAngles.z > 90 && aim.transform.eulerAngles.z < 280) && alreadyRotated) //RIGHT
         {
             gun.transform.Rotate(180f, 0, 0);
             alreadyRotated = !alreadyRotated;
         }
 
-        Debug.Log("Rotation actuelle : " + aim.transform.eulerAngles);
-        /*if (Input.GetKey("q") || Input.GetKey("right"))
-        {
-            aimTransform.Translate(0, 1, 0);
-        }*/
+        //Debug.Log("Rotation actuelle : " + aim.transform.eulerAngles);
+
     }
 
 
