@@ -30,6 +30,23 @@ public class Zombie : MonoBehaviour
     [SerializeField]
     public GameObject collisionCheck;
 
+    [SerializeField]
+    public GameObject player;
+
+
+    [SerializeField]
+    public GameObject firepoint;
+
+    [SerializeField]
+    public GameObject ammo;
+
+    [SerializeField]
+    public GameObject prefabRepository;
+
+
+    private float timer = 0.0f;
+    [SerializeField]
+    public float fireSpeed = 1.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +69,13 @@ public class Zombie : MonoBehaviour
     }
 
 
+    private void FixedUpdate()
+    {
+        timer += Time.deltaTime;
+        PlayerDetection();
+    }
+
+
     private void move()
     {
         rigidBody2D.velocity = new Vector2(speed*faceRight, rigidBody2D.velocity.y);
@@ -71,6 +95,45 @@ public class Zombie : MonoBehaviour
         transform.Rotate(0, 180f, 0);
     }
 
+
+    private void PlayerDetection()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(
+            new Vector2(transform.position.x + (transform.localScale.x/4)*faceRight, transform.position.y + transform.localScale.y/4),
+            new Vector2(transform.position.x + (transform.localScale.x/4 + 10)*faceRight, transform.position.y + transform.localScale.y/4)
+            );
+
+        // If it hits something...
+        if (hit.collider != null)
+        {
+            Debug.Log(hit.collider.name);
+            if (hit.collider.name == player.name && timer > fireSpeed)
+            {
+                Debug.Log("ALARM !");
+                shoot();
+                timer -= fireSpeed;
+            }
+            // Calculate the distance from the surface and the "error" relative
+            // to the floating height.
+            //float distance = Mathf.Abs(hit.point.y - transform.position.y);
+            //float heightError = floatHeight - distance;
+
+            // The force is proportional to the height error, but we remove a part of it
+            // according to the object's speed.
+            //float force = liftForce * heightError - rb2D.velocity.y * damping;
+
+            // Apply the force to the rigidbody.
+            //rb2D.AddForce(Vector3.up * force);
+        }
+    }
+
+    private void shoot()
+    {
+        Debug.Log("Shoot");
+        GameObject ammoPrefab = Instantiate(ammo, firepoint.transform.position, firepoint.transform.rotation);
+        //ammoPrefab.transform.SetParent(prefabRepository.transform);
+
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -125,5 +188,8 @@ public class Zombie : MonoBehaviour
         //Ligne pour réprésenter jusqu'où le mob peut aller
         Gizmos.color = Color.red;
         Gizmos.DrawLine(new Vector2(leftWalkLimit, transform.position.y + transform.localScale.y/4), new Vector2(rightWalkLimit, transform.position.y + transform.localScale.y/4));
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawLine(new Vector2(transform.position.x + (transform.localScale.x/4)*faceRight, transform.position.y + 3*(transform.localScale.y / 8)),
+            new Vector2(transform.position.x + (transform.localScale.x/4 + 10)* faceRight, transform.position.y + 3*(transform.localScale.y / 8))); //Ligne de vue
     }
 }
