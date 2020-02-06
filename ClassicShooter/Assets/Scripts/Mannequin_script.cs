@@ -6,12 +6,17 @@ public class Mannequin_script : MonoBehaviour
 {
 
     [SerializeField]
-    public int health = 100;
+    public float health = 100;
+    private float healthMax;
+
+    [SerializeField]
+    public GameObject healthBar;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        healthMax = health;
+        healthBar.transform.localScale = new Vector3(health * 1 / healthMax, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
     }
 
     // Update is called once per frame
@@ -39,7 +44,11 @@ public class Mannequin_script : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if(health <= 0)
+
+        //Barre de vie
+        healthBar.transform.localScale = new Vector3((float)(health * 1 / healthMax), healthBar.transform.localScale.y, healthBar.transform.localScale.z);
+
+        if (health <= 0)
         {
             die(); 
         }

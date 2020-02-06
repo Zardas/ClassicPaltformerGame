@@ -30,6 +30,15 @@ public class Player_movement : MonoBehaviour
     bool faceRight;
 
 
+    [SerializeField]
+    public float topLimit;
+    [SerializeField]
+    public float leftLimit;
+    [SerializeField]
+    public float rightLimit;
+    [SerializeField]
+    public float bottomLimit;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,8 +74,10 @@ public class Player_movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.LeftArrow)) // LEFT
         {
-
-            rigidBody2D.velocity = new Vector2(-runSpeed, rigidBody2D.velocity.y);
+            if (rigidBody2D.position.x > leftLimit)
+            {
+                rigidBody2D.velocity = new Vector2(-runSpeed, rigidBody2D.velocity.y);
+            }
 
             if (this.faceRight)
             {
@@ -80,7 +91,10 @@ public class Player_movement : MonoBehaviour
         }
         else if (Input.GetKey(KeyCode.RightArrow)) // DROITE
         {
-            rigidBody2D.velocity = new Vector2(runSpeed, rigidBody2D.velocity.y);
+            if (rigidBody2D.position.x < rightLimit)
+            {
+                rigidBody2D.velocity = new Vector2(runSpeed, rigidBody2D.velocity.y);
+            }
 
             if (!this.faceRight)
             {
@@ -107,7 +121,10 @@ public class Player_movement : MonoBehaviour
         // SAUT
         if (Input.GetKey(KeyCode.UpArrow) && isGrounded)
         {
-            rigidBody2D.velocity = new Vector2(rigidBody2D.velocity.x, jumpSpeed);
+            if (rigidBody2D.position.y < topLimit)
+            {
+                rigidBody2D.velocity = new Vector2(rigidBody2D.velocity.x, jumpSpeed);
+            }
             //animator.Play("Player_jump");
         }
     }
@@ -117,5 +134,21 @@ public class Player_movement : MonoBehaviour
     {
         this.faceRight = !this.faceRight;
         transform.Rotate(0, 180f, 0);
+    }
+
+
+
+
+    //Gizmo = élément graphiques dans l'éditeur pour les devs
+    private void OnDrawGizmos()
+    {
+        //Carré pour la caméra
+        Gizmos.color = Color.blue;
+        Gizmos.DrawLine(new Vector2(leftLimit, topLimit), new Vector2(rightLimit, topLimit));
+        Gizmos.DrawLine(new Vector2(leftLimit, topLimit), new Vector2(leftLimit, bottomLimit));
+        Gizmos.DrawLine(new Vector2(leftLimit, bottomLimit), new Vector2(rightLimit, bottomLimit));
+        Gizmos.DrawLine(new Vector2(rightLimit, bottomLimit), new Vector2(rightLimit, topLimit));
+
+        Gizmos.DrawIcon(new Vector2(leftLimit + 1, topLimit - 1), "Player_icon.png", true);
     }
 }
