@@ -37,11 +37,8 @@ public class Player_takeDamage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health = Mathf.Max(0, health-1);
-        //Debug.Log("Health : " + health);
         float newWidth = health * healthBarMax / healthMax; // Produit en croix
 
-        //Debug.Log("Width : " + healthBarCurrent_img.rect.width);
         Rect rect = healthBarCurrent_img.rect;
         healthBarCurrent_img.sizeDelta = new Vector2(newWidth, healthBarCurrent_img.rect.height);
 

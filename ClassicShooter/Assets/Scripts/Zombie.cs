@@ -65,7 +65,10 @@ public class Zombie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        move();
+        if(leftWalkLimit != 0 && rightWalkLimit != 0)
+        {
+            move();
+        }
     }
 
 
@@ -106,10 +109,8 @@ public class Zombie : MonoBehaviour
         // If it hits something...
         if (hit.collider != null)
         {
-            Debug.Log(hit.collider.name);
             if (hit.collider.name == player.name && timer > fireSpeed)
             {
-                Debug.Log("ALARM !");
                 shoot();
                 timer -= fireSpeed;
             }
@@ -129,7 +130,7 @@ public class Zombie : MonoBehaviour
 
     private void shoot()
     {
-        Debug.Log("Shoot");
+        //Debug.Log("Shoot");
         GameObject ammoPrefab = Instantiate(ammo, firepoint.transform.position, firepoint.transform.rotation);
         //ammoPrefab.transform.SetParent(prefabRepository.transform);
 
@@ -147,12 +148,13 @@ public class Zombie : MonoBehaviour
             TakeDamage(ammo.damage);
         }
 
-        
-        /*Plateform plateform = collision.GetComponent<Plateform>();
-        if (plateform != null)
+
+        //Explosion
+        Explosion explosion = collision.GetComponent<Explosion>();
+        if (explosion != null)
         {
-            TakeDamage(ammo.damage);
-        }*/
+            TakeDamage(explosion.damage);
+        }
 
     }
 
