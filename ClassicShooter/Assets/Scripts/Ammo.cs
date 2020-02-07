@@ -23,13 +23,17 @@ public class Ammo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        Debug.Log("Collision de la balle avec : " + collision.name);
+        die();
+    }
 
+    public void die()
+    {
         Destroy(gameObject);
     }
 }

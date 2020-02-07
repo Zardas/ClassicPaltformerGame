@@ -845,6 +845,7 @@ MonoBehaviour:
   leftLimit: -18.27
   rightLimit: 37.2
   bottomLimit: -14.4
+  ammoDirectory: {fileID: 312042429}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
