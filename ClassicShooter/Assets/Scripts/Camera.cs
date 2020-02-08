@@ -67,11 +67,10 @@ public class Camera : MonoBehaviour
                ammoPosition.y < bottomLimit ||
                ammoPosition.y > topLimit)
             {
-                Debug.Log("Destruction validée");
+                Debug.Log("Destruction ammo validée");
                 Destroy(ammoDirectory.transform.GetChild(i).gameObject);
             }
         }
-        Debug.Log("Test destruction ammo");
         
     }
 

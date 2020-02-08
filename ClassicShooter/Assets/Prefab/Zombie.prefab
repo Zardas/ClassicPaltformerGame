@@ -280,6 +280,8 @@ MonoBehaviour:
   ammo: {fileID: 6426897820970882358, guid: 676fbc46eb40cd64d89b7280a8969448, type: 3}
   prefabRepository: {fileID: 0}
   fireSpeed: 1
+  lineOfSight: 2
+  viewPoints: []
 --- !u!61 &61667037109521700
 BoxCollider2D:
   m_ObjectHideFlags: 0

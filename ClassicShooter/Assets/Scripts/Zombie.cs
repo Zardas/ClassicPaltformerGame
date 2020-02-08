@@ -48,6 +48,14 @@ public class Zombie : MonoBehaviour
     [SerializeField]
     public float fireSpeed = 1.0f;
 
+    [SerializeField]
+    private float lineOfSight = 5f;
+
+    
+    public Vector2[] viewPoints;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -56,11 +64,40 @@ public class Zombie : MonoBehaviour
 
         this.rigidBody2D = GetComponent<Rigidbody2D>();
 
-        if(beginFacingLeft)
+        
+
+        if (beginFacingLeft)
         {
             flip();
         }
+
+
+        
     }
+
+
+    private void createLinesOfView()
+    {
+        float x_base = transform.position.x + (transform.localScale.x / 6) * faceRight;
+        float x_horizontal_mid = transform.position.x + (transform.localScale.x / 6 + lineOfSight*1.5f) * faceRight;
+        float x_horizontal_full = transform.position.x + (transform.localScale.x / 6 + lineOfSight*2) * faceRight;
+
+        float y_base = transform.position.y + (transform.localScale.y / 2.5f);
+        float y_vertical_mid = transform.position.y + (transform.localScale.y / 2.5f + lineOfSight*1.5f) * faceRight;
+        float y_vertical_full = transform.position.y + (transform.localScale.y / 2.5f + lineOfSight*2) * faceRight;
+
+        Vector2 point_base = new Vector2(x_base, y_base);
+        Vector2 point_1 = new Vector2(x_horizontal_full, y_base);
+        //Vector2 point_2 = new Vector2(x_horizontal_full, y_vertical_mid);
+        Vector2 point_3 = new Vector2(x_horizontal_mid, y_vertical_mid);
+        //Vector2 point_4 = new Vector2(x_horizontal_mid, y_vertical_full);
+        Vector2 point_5 = new Vector2(x_base, y_vertical_full);
+
+        viewPoints = new Vector2[] { point_base, point_1, point_3, point_5};
+        
+            
+    }
+
 
     // Update is called once per frame
     void Update()
@@ -101,18 +138,36 @@ public class Zombie : MonoBehaviour
 
     private void PlayerDetection()
     {
+
+        /*for(int i = 1 ; i < 2 ; i++) {
+
+            RaycastHit2D hitCurrent = Physics2D.Raycast(viewPoints[0], viewPoints[i]);
+
+            // If it hits something...
+            if (hitCurrent.collider != null)
+            {
+                if (hitCurrent.collider.name == player.name && timer > fireSpeed)
+                {
+                    shoot();
+                    timer -= fireSpeed;
+                }
+            }
+
+        }*/
+
+
         RaycastHit2D hit = Physics2D.Raycast(
             new Vector2(transform.position.x + (transform.localScale.x/4)*faceRight, transform.position.y + transform.localScale.y/4),
             new Vector2(transform.position.x + (transform.localScale.x/4 + 10)*faceRight, transform.position.y + transform.localScale.y/4)
             );
-
+            
         // If it hits something...
         if (hit.collider != null)
         {
             if (hit.collider.name == player.name && timer > fireSpeed)
             {
                 shoot();
-                timer -= fireSpeed;
+                timer = 0;
             }
             // Calculate the distance from the surface and the "error" relative
             // to the floating height.
@@ -190,8 +245,18 @@ public class Zombie : MonoBehaviour
         //Ligne pour réprésenter jusqu'où le mob peut aller
         Gizmos.color = Color.red;
         Gizmos.DrawLine(new Vector2(leftWalkLimit, transform.position.y + transform.localScale.y/4), new Vector2(rightWalkLimit, transform.position.y + transform.localScale.y/4));
+
+
+        //Lignes de vue
         Gizmos.color = Color.yellow;
+        /*createLinesOfView();
+        //Debug.Log("Length : " + viewPoints.Length);
+        for(int i = 1; i < 4; i++)
+        {
+            Gizmos.DrawLine(viewPoints[0], viewPoints[i]);
+        }*/
         Gizmos.DrawLine(new Vector2(transform.position.x + (transform.localScale.x/4)*faceRight, transform.position.y + 3*(transform.localScale.y / 8)),
             new Vector2(transform.position.x + (transform.localScale.x/4 + 10)* faceRight, transform.position.y + 3*(transform.localScale.y / 8))); //Ligne de vue
+            
     }
 }
