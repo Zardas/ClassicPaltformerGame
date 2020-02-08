@@ -245,9 +245,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a40b1ab95f86e3b479be55720fe4d6b2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5bdfec1269ad1394c8d595b7f6125cbd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.34, y: 0.51}
@@ -277,7 +277,7 @@ MonoBehaviour:
   collisionCheck: {fileID: 2903553740681635553}
   player: {fileID: 5219745466913565554, guid: e31cb9a077252994cae7fee743dfd3d7, type: 3}
   firepoint: {fileID: 2192765854477455720}
-  ammo: {fileID: 6426897820970882358, guid: 676fbc46eb40cd64d89b7280a8969448, type: 3}
+  ammo: {fileID: 1676883337191138605, guid: 4697df4e390438c429da1e8dc1b2e162, type: 3}
   prefabRepository: {fileID: 0}
   fireSpeed: 1
   lineOfSight: 2
@@ -295,18 +295,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.26426688}
+  m_Offset: {x: 0, y: 0.24100146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.34, y: 0.51}
+    oldSize: {x: 0.24, y: 0.42}
     newSize: {x: 0.34, y: 0.51}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.34, y: 0.49146622}
+  m_Size: {x: 0.34, y: 0.53799707}
   m_EdgeRadius: 0
 --- !u!50 &50976424626665280
 Rigidbody2D:
