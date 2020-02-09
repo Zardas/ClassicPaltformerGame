@@ -114,7 +114,7 @@ public class Player_movement : MonoBehaviour
 
             if (isGrounded)
             {
-                //this.animator.Play("Hero_idle"); //Messe up with the shoot
+                this.animator.Play("Hero_idle"); //Messe up with the shoot
             }
         }
 
