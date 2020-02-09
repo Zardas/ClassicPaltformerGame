@@ -224,7 +224,7 @@ public class Zombie : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        health = Mathf.Max(0, health - damage);
 
         //Barre de vie
         healthBar.transform.localScale = new Vector3((float)(health * 1 / healthMax), healthBar.transform.localScale.y, healthBar.transform.localScale.z);

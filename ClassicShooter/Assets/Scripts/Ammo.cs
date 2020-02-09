@@ -29,7 +29,10 @@ public class Ammo : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Collision de la balle avec : " + collision.name);
-        die();
+        if (!collision.CompareTag("Invisible"))
+        {
+            die();
+        }
     }
 
     public void die()

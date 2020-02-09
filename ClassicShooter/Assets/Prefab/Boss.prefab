@@ -99,9 +99,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   aggro_x: 5
   aggro_y: 0
-  phase1_speed: 0.5
-  phase2_speed: 1
-  phase3_speed: 3
+  firespeed: 0
+  time_phase1: 5
+  time_phase2: 7
+  time_phase3: 4
+  firespeed_phase1: 0.5
+  firespeed_phase2: 1
+  firespeed_phase3: 2
   firepoint1: {fileID: 3236583934289778967}
   firepoint2: {fileID: 3664498998465446154}
   ammoLittle: {fileID: 2049410066458101780, guid: 65ee164e90aad464ea747e421789b8d8,
