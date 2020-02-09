@@ -69,7 +69,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5219745466041948876}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 5219745466913565567}
   - component: {fileID: 5219745466913565564}
   - component: {fileID: 5219745466913565565}
+  - component: {fileID: 1480666976441425411}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -217,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: aa71ab97a9619de458a5951e6f4c4d9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8013d148383702f49a632458d1bbd701, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -245,7 +246,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
-    oldSize: {x: 0.34, y: 0.52}
+    oldSize: {x: 0.29, y: 0.4}
     newSize: {x: 0.34, y: 0.52}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -327,6 +328,25 @@ MonoBehaviour:
   healthBarCurrent: {fileID: 0}
   healthBarEmpty: {fileID: 0}
   healthText: {fileID: 0}
+--- !u!95 &1480666976441425411
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5219745466913565554}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 641a3feb52e6a794dba4d1e176ea5513, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5219745467145654645
 GameObject:
   m_ObjectHideFlags: 0

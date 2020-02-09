@@ -29,6 +29,7 @@ public class Player_movement : MonoBehaviour
     bool isGrounded;
     bool faceRight;
 
+    private Animator animator;
 
     [SerializeField]
     public float topLimit;
@@ -44,6 +45,7 @@ public class Player_movement : MonoBehaviour
     {
         this.rigidBody2D = GetComponent<Rigidbody2D>();
         this.spriteRenderer = GetComponent<SpriteRenderer>();
+        this.animator = GetComponent<Animator>();
 
         this.faceRight = true;
     }
@@ -86,7 +88,7 @@ public class Player_movement : MonoBehaviour
 
             if (this.isGrounded)
             {
-                //animator.Play("Player_run");
+                this.animator.Play("Hero_run");
             }
         }
         else if (Input.GetKey(KeyCode.RightArrow)) // DROITE
@@ -103,7 +105,7 @@ public class Player_movement : MonoBehaviour
 
             if (this.isGrounded)
             {
-                //animator.Play("Player_run");
+                this.animator.Play("Hero_run");
             }
         }
         else
@@ -112,7 +114,7 @@ public class Player_movement : MonoBehaviour
 
             if (isGrounded)
             {
-                //animator.Play("Player_idle");
+                //this.animator.Play("Hero_idle"); //Messe up with the shoot
             }
         }
 
@@ -125,7 +127,7 @@ public class Player_movement : MonoBehaviour
             {
                 rigidBody2D.velocity = new Vector2(rigidBody2D.velocity.x, jumpSpeed);
             }
-            //animator.Play("Player_jump");
+            this.animator.Play("Hero_jump");
         }
     }
 

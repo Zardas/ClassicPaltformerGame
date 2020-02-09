@@ -14,10 +14,12 @@ public class Player_shoot : MonoBehaviour
     [SerializeField]
     public GameObject prefabRepository;
 
+    private Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        this.animator = transform.GetComponentInParent<Animator>();
     }
 
     // Update is called once per frame
@@ -32,6 +34,7 @@ public class Player_shoot : MonoBehaviour
     private void shoot()
     {
         Debug.Log("Shoot");
+        this.animator.Play("Hero_attack");
         GameObject ammoPrefab = Instantiate(ammo, firepoint.transform.position, firepoint.transform.rotation);
         ammoPrefab.transform.SetParent(prefabRepository.transform);
 
