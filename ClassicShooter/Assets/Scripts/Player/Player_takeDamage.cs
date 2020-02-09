@@ -49,7 +49,7 @@ public class Player_takeDamage : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        Debug.Log("Le joueur se fait toucher par " + collision.name);
 
 
         // Ammo
