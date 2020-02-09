@@ -54,7 +54,7 @@ public class Zombie : MonoBehaviour
     
     public Vector2[] viewPoints;
 
-
+    private Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +63,7 @@ public class Zombie : MonoBehaviour
         healthBar.transform.localScale = new Vector3(health * 1 / healthMax, healthBar.transform.localScale.y, healthBar.transform.localScale.z);
 
         this.rigidBody2D = GetComponent<Rigidbody2D>();
+        this.animator = GetComponent<Animator>();
 
         
 
@@ -186,6 +187,7 @@ public class Zombie : MonoBehaviour
     private void shoot()
     {
         //Debug.Log("Shoot");
+        animator.Play("Ghost_attack");
         GameObject ammoPrefab = Instantiate(ammo, firepoint.transform.position, firepoint.transform.rotation);
         //ammoPrefab.transform.SetParent(prefabRepository.transform);
 
@@ -235,7 +237,8 @@ public class Zombie : MonoBehaviour
 
     private void die()
     {
-        Destroy(gameObject);
+        animator.Play("Ghost_death");
+        Destroy(gameObject, 0.6f);
     }
 
 
