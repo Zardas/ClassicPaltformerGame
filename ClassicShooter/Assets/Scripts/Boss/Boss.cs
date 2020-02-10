@@ -171,6 +171,7 @@ public class Boss : MonoBehaviour
 
     private void shoot(GameObject player)
     {
+        animator.Play("demon_attack");
         switch(current_phase)
         {
             case 1:
