@@ -43,10 +43,10 @@ MonoBehaviour:
     y: 30
     width: 1600
     height: 767
-  m_MinSize: {x: 681, y: 498}
+  m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 1
-  controlID: 90
+  controlID: 39
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 0
     width: 1600
     height: 767
-  m_MinSize: {x: 681, y: 498}
+  m_MinSize: {x: 683, y: 498}
   m_MaxSize: {x: 14004, y: 14048}
   vertical: 0
-  controlID: 91
+  controlID: 40
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -160,10 +160,10 @@ MonoBehaviour:
     y: 0
     width: 1123
     height: 767
-  m_MinSize: {x: 404, y: 498}
+  m_MinSize: {x: 406, y: 498}
   m_MaxSize: {x: 10002, y: 14048}
   vertical: 1
-  controlID: 92
+  controlID: 20
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,10 +185,10 @@ MonoBehaviour:
     y: 0
     width: 1123
     height: 448
-  m_MinSize: {x: 404, y: 224}
-  m_MaxSize: {x: 8004, y: 4024}
+  m_MinSize: {x: 406, y: 224}
+  m_MaxSize: {x: 8006, y: 4024}
   vertical: 0
-  controlID: 93
+  controlID: 21
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -208,8 +208,8 @@ MonoBehaviour:
     y: 0
     width: 302
     height: 448
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 224}
+  m_MaxSize: {x: 4002, y: 4024}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -329,7 +329,7 @@ MonoBehaviour:
     m_CachedPref: -50
     m_ControlHash: 1964396721
     m_PrefName: Preview_TilemapBrushInspector
-  m_Palette: {fileID: 6120867230338253464, guid: 33e11d0419730fc48a358e940fa2d048,
+  m_Palette: {fileID: 2991535478912500187, guid: 3c31925d0dfa3c247aeb2c32a51d045f,
     type: 3}
 --- !u!114 &14
 MonoBehaviour:
@@ -440,9 +440,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 200e0000
-      m_LastClickedID: 3616
-      m_ExpandedIDs: 4aa4ffffdefbffff120e00005a0e0000600e0000920e0000be0e0000e20e0000
+      m_SelectedIDs: e80e0000
+      m_LastClickedID: 3816
+      m_ExpandedIDs: bafbffffdefbffff080f0000160f0000280f00002e0f00004e0f0000640f0000a80f0000b80f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -497,9 +497,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.2908327, y: -0.3516886, z: -0.12245151}
+    m_Target: {x: 81.49494, y: -5.7301693, z: -0.79078275}
     speed: 2
-    m_Value: {x: 0.2908327, y: -0.3516886, z: -0.12245151}
+    m_Value: {x: 81.49494, y: -5.7301693, z: -0.79078275}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -531,9 +531,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 26.742695
+    m_Target: 29.281359
     speed: 2
-    m_Value: 26.742695
+    m_Value: 29.281359
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -809,20 +809,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefab
+    - Assets/Graphics/Background
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefab
+  - Assets/Graphics/Background
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Antoine\Desktop\Scolaire\Master1Uqar\ConceptionJeuxVideos\ClassicPaltformerGame\ClassicShooter
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 330}
-    m_SelectedIDs: 220c0000
-    m_LastClickedID: 3106
-    m_ExpandedIDs: 00000000aa090000840a0000c40a00000a0c00006a0c00006e0c0000da0c0000ca0d0000142d000000ca9a3b
+    scrollPos: {x: 0, y: 210}
+    m_SelectedIDs: 923f0000
+    m_LastClickedID: 16274
+    m_ExpandedIDs: 00000000b0090000d80a00001a0b00007c0c00001a0d00001e0d0000980d0000920e0000f62d000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -850,7 +850,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aa090000840a0000c40a00000a0c00006e0c0000da0c0000142d0000
+    m_ExpandedIDs: 00000000b0090000d80a00001a0b00007c0c00001a0d00001e0d0000980d0000920e0000f62d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -878,7 +878,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000dc300000cc300000800b0000442900007629000088290000d8290000140a00002a0b0000060c0000e40b0000f0300000fe2900003c2f00001e4800001e0b0000700b0000780a0000162700008e270000e8290000842b0000700c0000840c00002a0c0000702d0000920d0000
+    m_ExpandedInstanceIDs: c6230000dc300000cc300000800b0000442900007629000088290000d8290000140a00002a0b0000060c0000e40b0000f0300000fe2900003c2f00001e4800001e0b0000700b0000780a0000162700008e270000e8290000842b0000700c0000840c00002a0c0000702d0000920d00004e0a0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
