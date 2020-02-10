@@ -45,6 +45,9 @@ TagManager:
   - name: UI
     uniqueID: 2730102747
     locked: 0
+  - name: TerrainGraphic
+    uniqueID: 2757201109
+    locked: 0
   - name: Platform
     uniqueID: 3523882613
     locked: 0
