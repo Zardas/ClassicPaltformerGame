@@ -42,7 +42,7 @@ public class Player_aimWeapon : MonoBehaviour
 
         if(angle > 90 && angle < 280) //LEFT
         {
-            aim.transform.eulerAngles = new Vector3(0, 0, angle + 20);
+            aim.transform.eulerAngles = new Vector3(0, 0, angle);
             if (!alreadyRotated)
             {
                 gun.transform.Rotate(180f, 0, 0);
@@ -51,7 +51,7 @@ public class Player_aimWeapon : MonoBehaviour
         }
         if(!(angle > 90 && angle < 280)) //RIGHT
         {
-            aim.transform.eulerAngles = new Vector3(0, 0, angle - 20);
+            aim.transform.eulerAngles = new Vector3(0, 0, angle);
             if(alreadyRotated)
             {
                 gun.transform.Rotate(180f, 0, 0);
