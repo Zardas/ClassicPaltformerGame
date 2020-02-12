@@ -5,7 +5,7 @@ using UnityEngine;
 public class Mine : MonoBehaviour
 {
     [SerializeField]
-    public int health = 1;
+    public int amount = 75;
 
     [SerializeField]
     private GameObject explosion;
@@ -25,51 +25,10 @@ public class Mine : MonoBehaviour
     }
 
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void die()
     {
-
-        // Ammo
-        Ammo ammo = collision.GetComponent<Ammo>();
-        if (ammo != null)
-        {
-            TakeDamage(ammo.damage);
-        }
-
-        // Zombie
-        Zombie zombie = collision.GetComponent<Zombie>();
-        if (zombie != null)
-        {
-            die();
-        }
-
-        // Mannequin
-        Mannequin_script mannequin = collision.GetComponent<Mannequin_script>();
-        if (mannequin != null)
-        {
-            die();
-        }
-
-        // Player
-        if (collision.name == "Player")
-        {
-            die();
-        }
-    }
-
-
-    public void TakeDamage(int damage)
-    {
-        health -= damage;
-
-        if (health <= 0)
-        {
-            die();
-        }
-    }
-
-    private void die()
-    {
-        GameObject explosion_prefab = Instantiate(explosion, transform.position, transform.rotation);
+        //GameObject explosion_prefab = Instantiate(explosion, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 }

@@ -59,11 +59,33 @@ public class Player_takeDamage : MonoBehaviour
             TakeDamage(ammo.damage);
         }
 
+        //Explosion
+        // Ammo
+        Explosion explosion = collision.GetComponent<Explosion>();
+        if (explosion != null)
+        {
+            TakeDamage(explosion.damage);
+        }
+
+        //Vie
+        Mine mine = collision.GetComponent<Mine>();
+        if(mine != null)
+        {
+            heal(mine.amount);
+            mine.die();
+        }
+
+    }
+
+
+    public void heal(int amount)
+    {
+        this.health = Mathf.Min(healthMax, health + amount);
     }
 
     public void TakeDamage(int damage)
     {
-        this.health -= damage;
+        this.health = Mathf.Max(0, health-damage);
         if (health <= 0)
         {
             die();
