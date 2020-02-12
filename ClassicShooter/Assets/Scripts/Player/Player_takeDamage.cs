@@ -7,6 +7,10 @@ public class Player_takeDamage : MonoBehaviour
 {
 
     [SerializeField]
+    private GameHandler gameHandler;
+
+
+    [SerializeField]
     public int health = 1000;
     private int healthMax;
 
@@ -98,8 +102,8 @@ public class Player_takeDamage : MonoBehaviour
         this.health = healthMax;
     }
 
-    private void die()
+    public void die()
     {
-        Destroy(gameObject);
+        gameHandler.GetComponent<Player_spawn>().spawnPlayer(this.gameObject);
     }
 }
