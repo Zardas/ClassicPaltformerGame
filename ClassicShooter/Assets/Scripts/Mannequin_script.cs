@@ -38,6 +38,12 @@ public class Mannequin_script : MonoBehaviour
             TakeDamage(ammo.damage);
         }
 
+        Explosion explosion = collision.GetComponent<Explosion>();
+        if (explosion != null)
+        {
+            TakeDamage(explosion.damage);
+        }
+
     }
 
 

@@ -12,10 +12,12 @@ public class FireBarrel : MonoBehaviour
 
     private Rigidbody2D rigidBody;
 
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
-        this.rigidBody = GetComponent<Rigidbody2D>();   
+        this.rigidBody = GetComponent<Rigidbody2D>();
+        this.animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -51,7 +53,7 @@ public class FireBarrel : MonoBehaviour
     private void die()
     {
         GameObject explosion_prefab = Instantiate(explosion, transform.position, transform.rotation);
-        Destroy(gameObject);
+        Destroy(gameObject, 0.3f);
     }
 
 }
