@@ -291,13 +291,13 @@ MonoBehaviour:
   groundCheck: {fileID: 5219745465857198406}
   groundCheckLeft: {fileID: 5219745466205030070}
   groundCheckRight: {fileID: 5219745467791967019}
-  jumpSpeed: 3
+  jumpSpeed: 10
   runSpeed: 6
   gun: {fileID: 5219745466041948876}
-  topLimit: 8.66
-  leftLimit: -12.31
-  rightLimit: 16.87
-  bottomLimit: -8.8
+  topLimit: 23.5
+  leftLimit: -30
+  rightLimit: 101
+  bottomLimit: -10.43
 --- !u!114 &5219745466913565564
 MonoBehaviour:
   m_ObjectHideFlags: 0

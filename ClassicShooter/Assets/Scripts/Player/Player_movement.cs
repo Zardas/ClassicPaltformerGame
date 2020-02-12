@@ -140,6 +140,10 @@ public class Player_movement : MonoBehaviour
 
 
 
+    public void ressucite()
+    {
+        this.faceRight = true;
+    }
 
     //Gizmo = élément graphiques dans l'éditeur pour les devs
     private void OnDrawGizmos()

@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Ammo.cs" />
     <Compile Include="Assets\Scripts\Boss\Boss.cs" />
     <Compile Include="Assets\Scripts\Camera.cs" />
+    <Compile Include="Assets\Scripts\DeathZone.cs" />
     <Compile Include="Assets\Scripts\Explosion.cs" />
     <Compile Include="Assets\Scripts\FireBarrel.cs" />
     <Compile Include="Assets\Scripts\GameHandler.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Assets\Scripts\Player\Player_aimWeapon.cs" />
     <Compile Include="Assets\Scripts\Player\Player_movement.cs" />
     <Compile Include="Assets\Scripts\Player\Player_shoot.cs" />
+    <Compile Include="Assets\Scripts\Player\Player_spawn.cs" />
     <Compile Include="Assets\Scripts\Player\Player_takeDamage.cs" />
     <Compile Include="Assets\Scripts\Zombie.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

@@ -92,6 +92,12 @@ public class Player_takeDamage : MonoBehaviour
         }
     }
 
+
+    public void ressucite()
+    {
+        this.health = healthMax;
+    }
+
     private void die()
     {
         Destroy(gameObject);
