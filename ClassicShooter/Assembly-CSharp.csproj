@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\Menu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Menu\Menu_Level.cs" />
     <Compile Include="Assets\Scripts\Mine.cs" />
+    <Compile Include="Assets\Scripts\Panneau\finalPanelAppear.cs" />
+    <Compile Include="Assets\Scripts\Panneau\panelAppear.cs" />
     <Compile Include="Assets\Scripts\Plateform.cs" />
     <Compile Include="Assets\Scripts\Player\Player_aimWeapon.cs" />
     <Compile Include="Assets\Scripts\Player\Player_movement.cs" />

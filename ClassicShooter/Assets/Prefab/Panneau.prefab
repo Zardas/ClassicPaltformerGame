@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4241076408513783289}
   - component: {fileID: 6546330194249786861}
   - component: {fileID: 5959159788471445699}
+  - component: {fileID: 5338875211895153729}
   m_Layer: 0
   m_Name: Panneau
   m_TagString: Invisible
@@ -106,3 +107,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8483929, y: 0.94055617}
   m_EdgeRadius: 0
+--- !u!114 &5338875211895153729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3801758810584991641}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b35c6bc5ea5c2c409c4aa821f2d6d8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panel: {fileID: 0}
+  text: {fileID: 0}
+  button: {fileID: 0}

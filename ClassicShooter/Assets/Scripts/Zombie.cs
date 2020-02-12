@@ -258,8 +258,8 @@ public class Zombie : MonoBehaviour
         {
             Gizmos.DrawLine(viewPoints[0], viewPoints[i]);
         }*/
-        Gizmos.DrawLine(new Vector2(transform.position.x + (transform.localScale.x/4)*faceRight, transform.position.y + 3*(transform.localScale.y / 8)),
-            new Vector2(transform.position.x + (transform.localScale.x/4 + 10)* faceRight, transform.position.y + 3*(transform.localScale.y / 8))); //Ligne de vue
+        Gizmos.DrawLine(new Vector2(transform.position.x + (transform.localScale.x / 4) * faceRight, transform.position.y + transform.localScale.y / 4),
+            new Vector2(transform.position.x + (transform.localScale.x / 4 + 10) * faceRight, transform.position.y + transform.localScale.y / 4)); //Ligne de vue
             
     }
 }
