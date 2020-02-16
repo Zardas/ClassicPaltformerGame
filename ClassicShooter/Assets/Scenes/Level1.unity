@@ -36665,12 +36665,12 @@ PrefabInstance:
     - target: {fileID: 5959159788471445699, guid: 0467eb48a776aa04899cfc0b1147aa02,
         type: 3}
       propertyPath: m_Offset.y
-      value: 0.6136116
+      value: 0.8752897
       objectReference: {fileID: 0}
     - target: {fileID: 5959159788471445699, guid: 0467eb48a776aa04899cfc0b1147aa02,
         type: 3}
       propertyPath: m_Size.y
-      value: 1.9390719
+      value: 5.1743593
       objectReference: {fileID: 0}
     - target: {fileID: 6546330194249786861, guid: 0467eb48a776aa04899cfc0b1147aa02,
         type: 3}
@@ -37409,6 +37409,11 @@ PrefabInstance:
       propertyPath: gameHandler
       value: 
       objectReference: {fileID: 1815188359}
+    - target: {fileID: 5219745466913565566, guid: e31cb9a077252994cae7fee743dfd3d7,
+        type: 3}
+      propertyPath: m_GravityScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5219745466913565567, guid: e31cb9a077252994cae7fee743dfd3d7,
         type: 3}
       propertyPath: rightLimit
